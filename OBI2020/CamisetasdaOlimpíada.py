@@ -1,9 +1,9 @@
 def rangeCheck(data, typeData):
-    if typeData == 1:
-        if data > 1000 or data < 0:
-            print('N')
     if typeData == 0:
         if data > 1000 or data < 1:
+            print('N')
+    if typeData == 1:
+        if data > 1000 or data < 0:
             print('N')
     if typeData == 2:
         for x in data:
@@ -13,7 +13,7 @@ def main():
     premiados = int(input())
     rangeCheck(premiados, 0)
 
-    tOne   =  map(int, input().split())
+    camisas   =  map(int, input().split())
 
     peqProduzidas = int(input())
     rangeCheck(peqProduzidas, 1)
@@ -21,19 +21,15 @@ def main():
     grandProduzidas = int(input())
     rangeCheck(grandProduzidas, 1)
 
-    tOne = list(map(int, tOne))
+    camisas = list(map(int, tOne))
     rangeCheck(tOne, 2)
 
-    repPeq = tOne.count(1)
-    repGrand = tOne.count(2)
-    if (peqProduzidas + grandProduzidas) != len(tOne):
+    repPeq = camisas.count(1)
+    repGrand = camisas.count(2)
+    if (peqProduzidas + grandProduzidas) != len(camisas):
         print('N')
-        return 'N'
     if peqProduzidas != repPeq or grandProduzidas != repGrand:
         print('N')
-        return 'N'
     else:
         print('S')
-        return 'S'
-
 main()
