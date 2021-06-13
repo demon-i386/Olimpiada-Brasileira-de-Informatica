@@ -13,16 +13,14 @@ def main():
     premiados = int(input())
     rangeCheck(premiados, 0)
 
-    camisas   =  map(int, input().split())
-
+    camisas   =  list(map(int, input().split()))
+    rangeCheck(camisas, 2)
+    
     peqProduzidas = int(input())
     rangeCheck(peqProduzidas, 1)
 
     grandProduzidas = int(input())
     rangeCheck(grandProduzidas, 1)
-
-    camisas = list(map(int, tOne))
-    rangeCheck(tOne, 2)
 
     repPeq = camisas.count(1)
     repGrand = camisas.count(2)
